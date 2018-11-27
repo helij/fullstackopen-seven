@@ -91,6 +91,14 @@ blogRouter.delete('/:id', async (request, response) => {
       await blog.remove()
     }
     
+    const user = await User.findById(decodedToken.id)
+
+    const index = user.blogs.indexOf(blog._id);
+    if (index !== -1) {
+      user.blogs.splice(index, 1);
+    }
+    await user.save()
+
     response.status(204).end()
   } catch (exception) {
     if (exception.name === 'JsonWebTokenError') {
