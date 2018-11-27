@@ -29,4 +29,7 @@
   "jest": {
     "testEnvironment": "node"
   }
+  "engines": {
+    "node": "10.3.0"
+  }
 }
