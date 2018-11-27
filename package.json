@@ -1,6 +1,9 @@
 {
   "name": "blogilista",
   "version": "1.0.0",
+  "engines": {
+    "node": "11.0.0"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,8 +31,5 @@
   },
   "jest": {
     "testEnvironment": "node"
-  }
-  "engines": {
-    "node": "10.3.0"
   }
 }
